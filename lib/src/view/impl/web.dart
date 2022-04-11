@@ -340,7 +340,7 @@ class _WebViewXState extends State<WebViewX> {
 
   // This creates a unique String to be used as the view type of the HtmlElementView
   String _createViewType() {
-    return HtmlUtils.buildIframeViewType();
+    return widget.webSpecificParams.iframeId ?? HtmlUtils.buildIframeViewType();
   }
 
   html.IFrameElement _createIFrame() {

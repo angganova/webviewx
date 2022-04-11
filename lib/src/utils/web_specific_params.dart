@@ -35,12 +35,15 @@ class WebSpecificParams {
   /// The loading indicator that shows up when the iframe content is loading (only when using [SourceType.urlBypass])
   final CssLoader cssLoadingIndicator;
 
+  final String? iframeId;
+
   /// Constructor
   const WebSpecificParams({
     List<BypassProxy> proxyList = BypassProxy.publicProxies,
     this.applyProxyLoadBalancing = true,
     this.printDebugInfo = false,
     this.webAllowFullscreenContent = true,
+    this.iframeId,
     this.additionalSandboxOptions = const [
       'allow-downloads',
       'allow-forms',
